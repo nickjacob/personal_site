@@ -1,0 +1,188 @@
+body{
+	font-family: 'Ubuntu Mono';
+	background: #aaa;
+}
+a{
+	color: #2F3ADD;
+	 -webkit-transition: color 0.3s ease-out;  
+     -moz-transition: color 0.3s ease-out;  
+      -ms-transition: color 0.3s ease-out;  
+       -o-transition: color 0.3s ease-out;  
+          transition: color 0.3s ease-out;
+
+}
+a:hover{
+	color: #6540f4;
+}
+.name{
+	font-size: 5em;
+	font-family: 'knewave';
+	word-spacing: -0.1em;
+	font-weight: 800;
+	color: #aca;
+	line-height: 1em;
+	text-shadow: 5px 2px #6540f4;
+	z-index:-10;
+	margin-bottom: 20px;
+}
+a#home{
+	border-top-left-radius:5px;
+}
+div#main{
+	width: 400px;
+	margin: auto;
+	padding: 5px;
+}
+a.menu_link,.soc{
+	padding: 5px;
+	margin: 0px;
+	text-decoration:none;
+	margin:0px;
+  -webkit-transition: all 0.3s ease-out;  
+     -moz-transition: all 0.3s ease-out;  
+      -ms-transition: all 0.3s ease-out;  
+       -o-transition: all 0.3s ease-out;  
+          transition: all 0.3s ease-out;
+
+}
+a.menu_link:hover{
+	color: #6540f4;
+}
+.active_tab{
+	background: #aca;
+	color: #fff;
+}
+.social{
+	border-radius: 5px;
+	margin-bottom: 5px;
+	background: #aca;
+	color: #fff;
+	padding: 5px;
+	padding-left:0px;
+	padding-right: 7px;
+	border: 2px solid rgba(200,200,200,0.5);
+	border-right: 1px solid #fff;
+}
+.social > a:first-child{
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+}
+.soc{
+	text-decoration:none;
+	color: #fff;
+	padding: 5px;
+}
+/* 100% width & left float */
+#menu, #container, .skill, .social,.course {
+	width: 100%;
+	float: left;
+}
+#menu{
+	background: #ccc;
+	padding: 5px;
+	padding-left: 0px;
+	padding-right: 9px;
+	border-bottom: 2px solid #aca;
+	border-right: 1px solid #fff;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+#container{
+	background: #eee;
+	padding: 5px;
+	padding-right: 4px;
+	border-right: 1px solid #fff;
+	border-top: 1px solid #aca;
+	border-bottom: 1px solid #fff;
+}
+.position{
+	font-size: 1.3em;
+	float: left;
+	width: 100%;
+}
+.desc{
+	font-size: 0.9em;
+	margin-left: 10px; /* indent */
+}
+.desc,.points,.jobDates{
+	float: left;
+}
+.dpt{
+	font-size: 1.2em;
+}
+.education{
+	border: 1px solid #333;
+	margin: 3px;
+	padding: 2px;
+}
+.key {
+	font-size: 0.8em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 5px;
+}
+.list{
+	font-size: 0.8em;
+	list-style: circle;
+	margin-top: 5px;
+	float: left;
+}
+.list > ul{
+	margin-top: 0px;
+	list-style: circle;
+}
+.title, a.title{
+	text-decoration:none;
+	font-size: 1.1em;
+	font-weight:800;
+}
+.oList{
+	background: #bbb;
+}
+.jobDates{
+	font-weight: bold;
+	font-style: italic;
+	font-size: 0.8em;
+	margin-left: 10px;
+}
+.one{
+	border-bottom: 2px solid #aaa;
+	float: left;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+.lastOne{
+	border-bottom: none;
+}
+.skill,.course{
+	padding: 2px;
+	border-radius:3px;
+}
+.skillA{
+	background: #ddd;
+}
+.sk{
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.skDesc{
+	width: 30%;
+}
+.skLevel{
+	width: 20%;
+}
+.skYrs{
+	width: 40%;
+}
+.ADVsk{
+	color: #f33;
+}
+.INTsk{
+	color: #3c3;
+}
+.EXPsk{
+	color: #cc3;
+}
+.NOVsk{
+	color: #c1c;
+}

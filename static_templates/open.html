@@ -1,0 +1,8 @@
+<div class="name">
+    Nick Jacob
+</div>
+<div class="social">
+    {% for link in social %}
+    <a class="soc" href="{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+</div>

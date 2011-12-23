@@ -1,0 +1,17 @@
+{# view for courses #}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".one").filter(":last").addClass("lastOne");
+        $(".course").filter(":even").addClass("skillA");
+    });
+</script>
+{% for dept in departments %}
+<div class="department one">
+    <span class="dpt">{{ dept.name }}</span>
+    {% for c in dept.course_set.all %}
+    <div class="course" id="{{ c.id }}">
+        {{ c.title }}
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}

@@ -1,0 +1,31 @@
+{# view for skills #}
+{# javascript #}
+<script type="text/javascript">
+    $(document).ready(function(){
+        {# style the skills #}
+        var knowl = $(".skLevel");
+        knowl.each(function(){
+            $(this).addClass($(this).text()+"sk");
+        });
+        $(".skill").filter(":odd").addClass("skillA");
+        $(".one").filter(":last").addClass("lastOne");
+
+    });
+</script>
+<div class="skill key">
+    <div class="sk skDesc">Skill</div>
+    <div class="sk skLevel">Level</div>
+    <div class="sk skYrs">Years Experience</div>
+</div>
+{% for cat in categories %}
+<div class="skillCat one">
+    {{ cat.title }}
+        {% for skill in cat.skill_set.all %}
+        <div class="skill">
+                <div class="sk skDesc">{{ skill.desc }}</div>
+                <div class="sk skLevel">{{ skill.level }}</div>
+                <div class="sk skYrs">{{ skill.years }}</div>
+        </div>
+        {% endfor %}
+</div>
+{% endfor %}

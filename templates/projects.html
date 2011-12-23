@@ -1,0 +1,21 @@
+{# view for projects #}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".one").filter(":last").addClass("lastOne");
+
+    });
+</script>
+{% for project in projects %}
+<div class="project one" id="{{ project.id }}">
+    <div class="proj title"><a class="title" href="{{ project.url }}">{{ project.title }}</a></div>
+    <div class="proj desc">{{ project.desc }}</div>
+    <div class="pt list">
+    Technologies Used:
+    <ul class="projTechs">
+        {% for tech in project.tech_set.all %}
+            <li class="projTech">{{ tech.name }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+</div>
+{% endfor %}

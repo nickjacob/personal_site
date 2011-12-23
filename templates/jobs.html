@@ -1,0 +1,21 @@
+<!-- create the data for the jobs -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".one").filter(":last").addClass("lastOne");
+
+    });
+</script>
+{% for job in jobs %}
+<div class="job one">
+    <span class="position">{{ job.title }}</span>    <div class="jobDates">{{ job.start|date:"F Y" }} to {{ job.end|date:"F Y" }}</div>
+
+    <div class="job desc">{{ job.desc }}</div>
+    <div class="points list">
+    <ul class="respist">
+        {% for resp in job.jobpoint_set.all %}
+            <li class="resp" id="{{ resp.id }}">{{ resp.point }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+</div>
+{% endfor %}

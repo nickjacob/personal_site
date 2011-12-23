@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% get_static_prefix %}style.css" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Knewave' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $("#home").addClass("active_tab");
+        $(".menu_link").not(".home").click(
+                function(e){
+                    e.preventDefault() {# very important -- disables click-through (for no js browser #}
+                    $("#container").load('http://{{ request.get_host }}/'+$(this).attr('id'));
+                    $(".menu_link").removeClass("active_tab"); // probably a more efficient way...
+                    $(this).addClass("active_tab");
+                }
+        );
+        });
+    </script>
+</head>
+<body>
+<div id="main">
+{% include "open.html" %}
+<div id="menu">
+    {% for link in menu %}
+        <a id="{{ link }}" class="menu_link" href="http://{{ request.get_host }}/{{ link }}">{{ link }}</a>
+    {% endfor %}
+</div>
+<div id="container">
+    {% include "home.html" %}
+    {% include "education.html" %}
+</div>
+</div>
+</body>
+</html>
